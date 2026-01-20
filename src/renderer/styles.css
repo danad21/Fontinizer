@@ -1,0 +1,161 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #0f1115;
+  color: #e6e7eb;
+}
+
+body {
+  margin: 0;
+  padding: 32px 48px 40px;
+  background: radial-gradient(circle at top, #1c2330, #0f1115 55%);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: #a7adb9;
+}
+
+.version-pill {
+  background: #1d2431;
+  border: 1px solid #303a4f;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.panel {
+  background: #151a24;
+  border: 1px solid #2b3244;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.field {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+input[type="checkbox"] {
+  accent-color: #6fa9ff;
+}
+
+input[type="text"],
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="text"],
+#customGlyphs {
+  background: #0f1115;
+  border: 1px solid #2f394e;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e6e7eb;
+}
+
+.checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  background: #4b74ff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #2d3649;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.template-preview {
+  margin-top: 16px;
+  border: 1px dashed #3b4760;
+  border-radius: 12px;
+  min-height: 220px;
+  padding: 16px;
+  background: #0f131c;
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
+}
+
+.template-cell {
+  border: 1px solid #3a455b;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  background: #131824;
+  font-size: 0.9rem;
+}
+
+.placeholder {
+  color: #7f8796;
+}
+
+.steps {
+  padding-left: 18px;
+  margin: 12px 0 20px;
+  color: #c0c5d1;
+}
+
+.app-footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  color: #8a92a3;
+  font-size: 0.9rem;
+}
+
+.muted {
+  color: #a2a9b7;
+}
+
+small {
+  color: #8a92a3;
+}

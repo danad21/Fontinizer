@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fontinizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>Fontinizer</h1>
+        <p>Start building a single-stroke handwritten font for Windows.</p>
+      </div>
+      <div class="version-pill">v<span id="appVersion">0.1.0</span></div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>1. Choose glyph sets</h2>
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" value="latin" checked />
+            Latin alphabet (A–Z, a–z)
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="digits" checked />
+            Digits (0–9)
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="punctuation" />
+            Punctuation & symbols
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="math" />
+            Math & physics (LaTeX presets)
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="customGlyphs">Custom characters</label>
+          <input id="customGlyphs" placeholder="e.g. ∑ ∫ Δ Ω →" />
+          <small>Paste Unicode symbols or LaTeX macros; we will map when available.</small>
+        </div>
+
+        <div class="field">
+          <label for="variantCount">Variations per glyph</label>
+          <div class="range-row">
+            <input id="variantCount" type="range" min="4" max="12" value="4" />
+            <span id="variantCountValue">4</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>2. Template preview</h2>
+        <p class="muted">Generate a printable template to collect handwriting samples.</p>
+        <button id="generateTemplate">Generate template preview</button>
+        <div id="templatePreview" class="template-preview">
+          <div class="placeholder">Template preview will appear here.</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>3. Next steps</h2>
+        <ul class="steps">
+          <li>Scan the filled template at 300 DPI.</li>
+          <li>Import scans to segment each glyph cell.</li>
+          <li>Review single-stroke extraction and export a .tiff font.</li>
+        </ul>
+        <button class="secondary">Open scan importer (coming soon)</button>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Windows-first desktop app prototype.</span>
+      <span>Version <strong id="footerVersion">0.1.0</strong></span>
+    </footer>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

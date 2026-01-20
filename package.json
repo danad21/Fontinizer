@@ -1,0 +1,14 @@
+{
+  "name": "fontinizer",
+  "version": "0.1.0",
+  "description": "Handwritten single-stroke font builder for Windows.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "lint": "echo \"No lint configured\"",
+    "test": "echo \"No tests configured\""
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}
